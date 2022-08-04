@@ -1,0 +1,138 @@
+
+:root {
+  --mainFont: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 2%;
+  box-sizing: inherit;
+  background-color: #f1f1f1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: .5%;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.container {
+  margin: auto;
+  padding: 7px;
+}
+
+img {
+  width: 10%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 7rem;
+}
+
+a {
+  text-align: center;
+  padding: 7px;
+  text-decoration: none;
+  color: #404040;
+  font-family: var(--mainFont);
+  font-weight: 500;
+}
+
+a:hover {
+  color: #0c0c0c;
+  background-color: #87ceeb;
+  transition: transform all .5s;
+}
+
+.hero {
+	height: 120vh;
+  margin-top: 3rem;
+  display: grid;
+	background: linear-gradient(45deg, rgba(255,175,189,.7), rgba(100,216,243,.7), rgba(234,236,198,.7), rgba(245,146,176,.7), rgba(52,219,216,.7)) 0 0 / 1000% no-repeat, url(https://picsum.photos/g/2000/1200?image=443) 0 0 / cover no-repeat;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	-webkit-animation: gradientAnimation 40s ease infinite;
+	animation: gradientAnimation 40s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+
+@keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+
+h1 {
+	position: absolute;
+	top: 90%; left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font : normal 600 72px/1 'Open Sans', sans-serif;
+	text-align: center;
+	white-space: nowrap;
+}
+
+h1 span {
+	display: block;
+	margin-top: 1em;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.grid { 
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  align-items: stretch;
+ }
+
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  nav li {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+} 
+  
